@@ -1,16 +1,16 @@
 import "./globals.css";
 import { Playfair_Display, Source_Sans_Pro } from "next/font/google";
 
-import { Header } from "@/components";
+import { Footer, Header } from "@/components";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const sourceSansPro = Source_Sans_Pro({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["300", "400", "600", "700"],
 });
 
 export const metadata = {
@@ -28,7 +28,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={sourceSansPro.className}>
         <Header />
-        <main className="bg-zinc-800 min-h-screen">{children}</main>
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
