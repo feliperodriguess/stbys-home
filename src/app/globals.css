@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper-pagination-bullet {
+  @apply bg-white opacity-90 h-3 w-3;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-transparent border-2 border-white;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply bg-gray-300 bg-opacity-70 rounded-full h-[72px] w-[72px] text-zinc-950 p-4 mr-4;
+}
+
+.swiper-button-prev {
+  @apply ml-4;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-3xl;
+}

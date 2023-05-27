@@ -1,3 +1,7 @@
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./globals.css";
 import { Playfair_Display, Source_Sans_Pro } from "next/font/google";
 

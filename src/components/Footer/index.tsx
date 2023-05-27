@@ -15,7 +15,7 @@ export function Footer() {
 
           {SOCIAL_MEDIA_LINKS.map(({ href, Icon }) => (
             <li key={href}>
-              <Link href={href}>
+              <Link href={href} target="_blank">
                 <Icon
                   className="h-10 w-10 text-zinc-900 hover:text-yellow-500 transition-colors"
                   key={href}
