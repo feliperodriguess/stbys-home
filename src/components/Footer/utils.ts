@@ -1,26 +1,27 @@
-import {
-  FacebookLogo as FacebookIcon,
-  InstagramLogo as InstagramIcon,
-  TwitterLogo as TwitterIcon,
-  YoutubeLogo as YoutubeIcon,
-} from "@phosphor-icons/react";
-
-export const SOCIAL_MEDIA_LINKS = [
+export const SOCIAL_MEDIA = [
   {
     href: "https://twitter.com/sothebys",
-    Icon: TwitterIcon,
+    icon: "twitter.svg",
+    iconHeight: 25,
   },
   {
     href: "https://www.facebook.com/sothebys",
-    Icon: FacebookIcon,
+    icon: "facebook.svg",
   },
   {
     href: "https://www.instagram.com/sothebys/",
-    Icon: InstagramIcon,
+    icon: "instagram.svg",
   },
   {
     href: "https://www.youtube.com/sothebys",
-    Icon: YoutubeIcon,
+    icon: "youtube.svg",
+    iconHeight: 24,
+    iconWidth: 58,
+  },
+  {
+    href: "https://weibo.com/sothebyshongkong?is_hot=1",
+    icon: "weibo.svg",
+    iconHeight: 25,
   },
 ];
 

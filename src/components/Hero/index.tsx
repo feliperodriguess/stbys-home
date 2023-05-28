@@ -27,14 +27,14 @@ export function Hero() {
             >
               <Link href={linkHref} target="_blank">
                 <div
-                  className={`absolute bottom-6 bg-cyan-1000 max-w-md p-8 w-full ${
+                  className={`absolute bottom-6 bg-cyan-1000 bg-opacity-90 max-w-md p-8 w-full ${
                     left ? "left-6" : "right-6"
                   }`}
                 >
                   {/* Update font family (title and subtitle) */}
                   <h2 className="mb-2 text-white text-3xl">{title}</h2>
                   {subtitle && <p className="mb-4 text-white">{subtitle}</p>}
-                  <span className="text-yellow-600 uppercase hover:underline">
+                  <span className="text-yellow-1000 uppercase hover:underline">
                     {linkLabel}
                   </span>
                 </div>

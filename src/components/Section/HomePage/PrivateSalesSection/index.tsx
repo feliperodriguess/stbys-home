@@ -17,6 +17,7 @@ export function PrivateSalesSection() {
               className="object-cover h-[calc(100%-28px)] w-full"
               src={image}
             />
+            {/* Update font family */}
             <p className="mt-2 text-slate-900 text-xl">{label}</p>
           </Link>
         ))}

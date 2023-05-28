@@ -1,1 +1,1 @@
-export * from "./PrivateSalesSection";
+export * from "./HomePage";

@@ -1,24 +1,25 @@
-"use client";
+import Image from "next/image";
 import Link from "next/link";
 
-import { ITEMS, SOCIAL_MEDIA_LINKS } from "./utils";
+import { ITEMS, SOCIAL_MEDIA } from "./utils";
 
 export function Footer() {
   return (
     <footer>
-      <div className="bg-neutral-200 w-full">
-        <ul className="flex items-center justify-between max-w-4xl mx-auto px-8 py-6">
+      <div className="bg-gray-100 w-full">
+        <ul className="flex items-center justify-between max-w-5xl mx-auto px-8 py-6">
           <li>
             {/* Update font family */}
             <strong className="text-zinc-800 text-4xl">Follow Us</strong>
           </li>
-
-          {SOCIAL_MEDIA_LINKS.map(({ href, Icon }) => (
+          {SOCIAL_MEDIA.map(({ href, icon, iconHeight, iconWidth }) => (
             <li key={href}>
               <Link href={href} target="_blank">
-                <Icon
-                  className="h-10 w-10 text-zinc-900 hover:text-yellow-500 transition-colors"
-                  key={href}
+                <Image
+                  alt=""
+                  height={iconHeight || 30}
+                  src={`/icons/${icon}`}
+                  width={iconWidth || 30}
                 />
               </Link>
             </li>

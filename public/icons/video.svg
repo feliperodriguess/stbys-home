@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon Navy - Video - 24x24</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Video-Play" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-135.000000, -61.000000)">
+        <g id="Icon-Navy---Video---24x24" transform="translate(135.000000, 61.000000)" fill="#00253E" fill-rule="nonzero">
+            <path d="M1.21181754,21.8328775 L1.21181754,2.17008965 C1.21181754,1.28190004 1.70204022,0.979966989 2.50861882,1.38325628 L22.6552753,11.4565845 C23.4150031,11.8364484 23.4163662,12.1658372 22.6552753,12.5463827 L2.50861882,22.6197109 C1.71054448,23.0187481 1.21181754,22.7134674 1.21181754,21.8328775 Z M23.1972166,13.6302652 C24.8541215,12.8018128 24.8474839,11.1978356 23.1972166,10.372702 L3.0505601,0.299373728 C1.4391429,-0.506334868 0,0.380047625 0,2.17008965 L0,21.8328775 C0,23.6171317 1.44925204,24.5042475 3.0505601,23.7035935 L23.1972166,13.6302652 Z"></path>
+        </g>
+    </g>
+</svg>

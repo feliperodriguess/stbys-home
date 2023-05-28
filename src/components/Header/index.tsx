@@ -1,10 +1,5 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Tote as BagIcon,
-  MagnifyingGlass as SearchIcon,
-} from "@phosphor-icons/react";
 
 import { Input } from "@/components";
 
@@ -40,8 +35,13 @@ export function Header() {
         </div>
 
         <div className="flex gap-3 items-center">
-          <Input Icon={SearchIcon} placeholder="Search Sotheby's" />
-          <BagIcon className="h-6 w-6 text-zinc-800" />
+          <Input icon="/icons/search.svg" placeholder="Search Sotheby's" />
+          <Image
+            alt="View Shopping Bag"
+            height={24}
+            src="/icons/bag.svg"
+            width={24}
+          />
         </div>
       </nav>
     </header>

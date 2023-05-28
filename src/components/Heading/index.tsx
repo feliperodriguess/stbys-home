@@ -15,4 +15,4 @@ export function Heading({ className, children, ...props }: HeadingProps) {
 }
 
 const afterClassName =
-  "after:content-[''] after:block after:mt-2 after:bg-[#c29b40] after:h-[2px] after:w-[91px]";
+  "after:content-[''] after:block after:mt-2 after:bg-yellow-1000 after:h-[2px] after:w-[91px]";
