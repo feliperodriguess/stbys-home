@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Button, Heading, ProductSwiper } from "@/components";
+import { Button, Heading, ProductSwiper, SectionHeader } from "@/components";
 
 import { COLLECTIBLES } from "./utils";
 
@@ -10,12 +10,11 @@ export function CollectiblesSection() {
       <div className="bg-gray-100 flex items-center justify-between w-full">
         <div className="flex flex-col ml-[120px] justify-center">
           <Heading className="!ml-0"> {"Sell with Sotheby's"}</Heading>
-          {/* Update font family - two p(s) */}
-          <p>
+          <p className="font-display">
             Curious to know if your item is suitable for one of our upcoming
             sales?
           </p>
-          <p className="my-10">
+          <p className="font-display my-10">
             Provide information and share images to request an online estimate
             now.
           </p>
@@ -32,17 +31,14 @@ export function CollectiblesSection() {
           width={710}
         />
       </div>
-
-      <div className="relative mt-20 px-8">
-        <Heading>Luxury Collectibles Available for Immediate Purchase</Heading>
-        <a
-          className="absolute top-8 right-36 text-blue-900 uppercase"
-          href="https://www.sothebys.com/en/buy/luxury/collectibles"
-          target="_blank"
-        >
-          View all
-        </a>
-        <ProductSwiper items={COLLECTIBLES} />
+      <div className="mt-10">
+        <SectionHeader
+          title="Luxury Collectibles Available for Immediate Purchase"
+          viewAllLink="https://www.sothebys.com/en/buy/luxury/collectibles"
+        />
+        <div className="px-8">
+          <ProductSwiper items={COLLECTIBLES} />
+        </div>
       </div>
     </section>
   );

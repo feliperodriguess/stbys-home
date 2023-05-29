@@ -1,14 +1,13 @@
-interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
+interface HeadingProps extends React.HTMLProps<HTMLHeadingElement> {
   children: React.ReactNode;
 }
 
 export function Heading({ className, children, ...props }: HeadingProps) {
   return (
     <h2
-      className={`ml-[120px] mb-8 text-slate-900 text-4xl ${afterClassName} ${className}`}
+      className={`font-display ml-[120px] mb-8 text-gray-1000 text-4xl ${afterClassName} ${className}`}
       {...props}
     >
-      {/* Update font family */}
       {children}
     </h2>
   );

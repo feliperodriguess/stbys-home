@@ -1,20 +1,21 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { SwiperSlide } from "swiper/react";
 
 import { BaseSwiper } from "@/components";
 
+interface Product {
+  href: string;
+  imageSrc: string;
+  imageHeight?: number;
+  imageWidth?: number;
+  title?: string;
+  subtitle?: string;
+  price?: number;
+}
+
 interface ProductSwiperProps {
-  items: {
-    href: string;
-    imageSrc: string;
-    imageHeight?: number;
-    imageWidth?: number;
-    title?: string;
-    subtitle?: string;
-    price?: number;
-  }[];
+  items: Product[];
 }
 
 export function ProductSwiper({ items }: ProductSwiperProps) {
@@ -22,22 +23,26 @@ export function ProductSwiper({ items }: ProductSwiperProps) {
     <BaseSwiper>
       {items.map((item) => (
         <SwiperSlide key={item.href}>
-          <Link href={item.href}>
+          <a href={item.href} target="_blank">
             <Image
               alt={(item?.title || item?.subtitle)!}
+              className="object-contain"
               height={item?.imageHeight || 330}
               src={item.imageSrc}
+              style={{
+                minHeight: `${item.imageHeight || 330}px`,
+                maxHeight: `${item.imageHeight || 330}px`,
+              }}
               width={item?.imageWidth || 330}
             />
             <div className="mt-4 ">
-              {/* Update font family - only for the title */}
               {item?.title && (
-                <p className="mb-1 font-medium text-slate-900 text-2xl uppercase">
+                <p className="font-display mb-1 text-gray-1000 text-2xl uppercase">
                   {item.title}
                 </p>
               )}
               {item?.subtitle && (
-                <p className="text-slate-900 text-lg">{item.subtitle}</p>
+                <p className="text-gray-1000 text-lg">{item.subtitle}</p>
               )}
               {item?.price && (
                 <span className="font-light mt-4 text-black">
@@ -45,7 +50,7 @@ export function ProductSwiper({ items }: ProductSwiperProps) {
                 </span>
               )}
             </div>
-          </Link>
+          </a>
         </SwiperSlide>
       ))}
     </BaseSwiper>

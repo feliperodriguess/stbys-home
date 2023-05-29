@@ -25,11 +25,18 @@ module.exports = {
         gray: {
           100: "#f1f1f1",
           200: "hsla(0,0%,100%,.9)",
+          250: "#ebebeb",
+          700: "#748794",
+          800: "#6b6b6b",
+          900: "#979797",
           1000: "#333333",
         },
         yellow: {
           1000: "#c29b40",
         },
+      },
+      fontFamily: {
+        display: ["var(--font-playfair-display)"],
       },
       fontSize: {
         "4xl": "2rem",

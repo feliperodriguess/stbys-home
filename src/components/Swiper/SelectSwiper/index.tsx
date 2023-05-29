@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { SwiperSlide } from "swiper/react";
 
 import { AuctionCardProps, BaseSwiper } from "@/components";
@@ -27,15 +26,12 @@ export function SelectSwiper({ slides }: SelectSwiperProps) {
           key={items[0]?.title}
           className={`flex flex-col justify-between h-[516px] !w-[${items[0]?.imageWidth}px]`}
           style={{
+            minWidth: `${items[0]?.imageWidth}px`,
             maxWidth: `${items[0]?.imageWidth}px`,
           }}
         >
           {items.map((item) => (
-            <Link
-              className={`max-w-[${item.imageWidth}px]`}
-              key={item.href}
-              href={item.href}
-            >
+            <a key={item.href} href={item.href} target="_blank">
               <Image
                 alt={item.title}
                 height={item.imageHeight}
@@ -61,11 +57,10 @@ export function SelectSwiper({ slides }: SelectSwiperProps) {
                   </span>
                 </div>
               )}
-              {/* Update font family - subtitle */}
-              <p className="font-semibold text-gray-1000 text-xl">
+              <p className="font-display font-medium text-gray-1000 text-xl">
                 {item.subtitle}
               </p>
-            </Link>
+            </a>
           ))}
         </SwiperSlide>
       ))}

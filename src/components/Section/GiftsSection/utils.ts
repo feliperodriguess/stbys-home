@@ -427,6 +427,8 @@ export const PENS = [
   },
 ];
 
+export type Gift = keyof typeof GIFTS;
+
 export const GIFTS = {
   JEWELRY,
   WATCHES,
@@ -434,3 +436,5 @@ export const GIFTS = {
   BOOKS,
   PENS,
 };
+
+export const GIFT_CATEGORIES = Object.keys(GIFTS) as Array<Gift>;

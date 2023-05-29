@@ -7,14 +7,15 @@ import { Playfair_Display, Source_Sans_Pro } from "next/font/google";
 
 import { Footer, Header } from "@/components";
 
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
 const sourceSansPro = Source_Sans_Pro({
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"],
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair-display",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -29,8 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={sourceSansPro.className}>
+    <html
+      lang="en"
+      className={`${sourceSansPro.className} ${playfairDisplay.variable}`}
+    >
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />
