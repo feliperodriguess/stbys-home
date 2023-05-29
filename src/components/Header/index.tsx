@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Input } from "@/components";
+import { Input, PopoverMenu } from "@/components";
 
 import { ITEMS, TOP_ITEMS } from "./utils";
 
@@ -28,9 +28,9 @@ export function Header() {
 
         <div className="flex gap-16">
           {ITEMS.map(({ href, label }) => (
-            <Link key={href} className="text-zinc-800 uppercase" href={href}>
-              {label}
-            </Link>
+            <PopoverMenu key={label} label={label}>
+              aaa
+            </PopoverMenu>
           ))}
         </div>
 
