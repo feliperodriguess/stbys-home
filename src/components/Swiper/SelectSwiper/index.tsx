@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SwiperSlide } from "swiper/react";
 
 import { AuctionCardProps, BaseSwiper } from "@/components";
+import { useMediaQuery } from "@/hooks";
 
 interface SelectCard extends Omit<AuctionCardProps, "type"> {
   imageHeight: number;
@@ -19,27 +20,33 @@ interface SelectSwiperProps {
 }
 
 export function SelectSwiper({ slides }: SelectSwiperProps) {
+  const isSmallScreen = useMediaQuery("(max-width: 1024px)");
+
   return (
     <BaseSwiper slidesPerGroup={3} slidesPerView={3}>
       {slides.map(({ items }) => (
         <SwiperSlide
           key={items[0]?.title}
-          className={`flex flex-col justify-between h-[516px] !w-[${items[0]?.imageWidth}px]`}
-          style={{
-            minWidth: `${items[0]?.imageWidth}px`,
-            maxWidth: `${items[0]?.imageWidth}px`,
-          }}
+          className={`flex flex-col justify-between max-lg:gap-1 lg:h-[516px] max-lg:max-w-[90%]`}
+          style={
+            isSmallScreen
+              ? {}
+              : {
+                  minWidth: `${items[0].imageWidth}px`,
+                  maxWidth: `${items[0].imageWidth}px`,
+                }
+          }
         >
           {items.map((item) => (
             <a key={item.href} href={item.href} target="_blank">
               <Image
                 alt={item.title}
+                className="object-cover w-full"
                 height={item.imageHeight}
-                src={item.imageSrc}
                 style={{
                   maxHeight: `${item.imageHeight}px`,
-                  objectFit: "cover",
                 }}
+                src={item.imageSrc}
                 width={item.imageWidth}
               />
               {item.title && (
@@ -57,7 +64,10 @@ export function SelectSwiper({ slides }: SelectSwiperProps) {
                   </span>
                 </div>
               )}
-              <p className="font-display font-medium text-gray-1000 text-xl">
+              <p
+                className={`font-display font-medium text-gray-1000 text-xl
+                ${items?.length > 1 ? "max-lg:line-clamp-1" : ""}`}
+              >
                 {item.subtitle}
               </p>
             </a>

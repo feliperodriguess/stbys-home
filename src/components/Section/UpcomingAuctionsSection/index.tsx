@@ -9,7 +9,7 @@ export function UpcomingAuctionsSection() {
         title="Upcoming Auctions"
         viewAllLink="https://www.sothebys.com/en/calendar"
       />
-      <div className="px-8">
+      <div className="px-4 lg:px-8">
         <AuctionSwiper items={AUCTIONS} />
       </div>
     </section>

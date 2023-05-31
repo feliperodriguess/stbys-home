@@ -35,7 +35,7 @@ export function ProductSwiper({ items }: ProductSwiperProps) {
               }}
               width={item?.imageWidth || 330}
             />
-            <div className="mt-4 ">
+            <div className="mt-4 max-w-[330px]">
               {item?.title && (
                 <p className="font-display mb-1 text-gray-1000 text-2xl uppercase">
                   {item.title}

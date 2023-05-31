@@ -7,10 +7,10 @@ interface SectionHeaderProps {
 
 export function SectionHeader({ title, viewAllLink }: SectionHeaderProps) {
   return (
-    <div className="relative">
-      <Heading>{title}</Heading>
+    <div className="flex items-center justify-center relative lg:block">
+      <Heading className="max-lg:text-center">{title}</Heading>
       <a
-        className="absolute top-8 right-36 text-blue-900 uppercase"
+        className="hidden lg:inline lg:absolute top-8 right-36 text-blue-900 uppercase"
         href={viewAllLink}
         target="_blank"
       >

@@ -9,7 +9,7 @@ export function SelectsSection() {
         title="Sotheby's Selects"
         viewAllLink="https://www.sothebys.com/en/all-stories-videos"
       />
-      <div className="px-8">
+      <div className="px-4 lg:px-8">
         <SelectSwiper slides={SLIDES} />
       </div>
     </section>

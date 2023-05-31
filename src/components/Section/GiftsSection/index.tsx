@@ -9,12 +9,12 @@ export function GiftsSection() {
   const [selectedCategory, setSelectedCategory] = useState<Gift>("JEWELRY");
 
   return (
-    <section className="mt-40 mb-20">
+    <section className="mb-20 mt-24">
       <SectionHeader
         title="Gifts for the Graduate"
         viewAllLink="https://www.sothebys.com/en/buy/gifts-for-the-graduate"
       />
-      <div className="flex items-center gap-10 mb-12 ml-[120px]">
+      <div className="flex flex-wrap max-lg:justify-center items-center gap-10 mb-12 ml-4 lg:ml-[120px]">
         {GIFT_CATEGORIES.map((category: Gift) => (
           <button
             key={category}
@@ -31,7 +31,7 @@ export function GiftsSection() {
           </button>
         ))}
       </div>
-      <div className="px-8">
+      <div className="px-4 lg:px-8">
         <ProductSwiper items={GIFTS[selectedCategory]} />
       </div>
     </section>

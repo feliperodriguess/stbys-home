@@ -15,6 +15,9 @@ module.exports = {
       borderRadius: {
         sm: "0.25rem",
       },
+      boxShadow: {
+        xl: "0 2px 4px 0 rgba(0,0,0,.1)",
+      },
       colors: {
         blue: {
           900: "#23448d",

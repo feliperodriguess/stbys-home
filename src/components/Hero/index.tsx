@@ -18,14 +18,16 @@ export function Hero() {
         ({ title, subtitle, image, linkHref, linkLabel, left }) => (
           <SwiperSlide key={`${title} ${subtitle}`}>
             <div
-              className="relative bg-auto bg-no-repeat bg-center h-[685px] w-full"
+              className="flex flex-col justify-end relative bg-auto bg-no-repeat bg-center h-[550px] lg:h-[685px] w-full"
               style={{
                 backgroundImage: `url(${image})`,
+                objectFit: "contain",
               }}
             >
               <a href={linkHref} target="_blank">
                 <div
-                  className={`absolute bottom-6 bg-cyan-1000 bg-opacity-90 max-w-md p-8 w-full ${
+                  className={`bg-cyan-1000 bg-opacity-90 mx-auto mb-9 max-w-[90%] p-8 w-full 
+                  lg:mb-0 lg:max-w-md lg:absolute bottom-8 ${
                     left ? "left-6" : "right-6"
                   }`}
                 >
@@ -33,7 +35,9 @@ export function Hero() {
                     {title}
                   </h2>
                   {subtitle && (
-                    <p className="font-display mb-4 text-white">{subtitle}</p>
+                    <p className="hidden font-display mb-4 text-white lg:block">
+                      {subtitle}
+                    </p>
                   )}
                   <span className="text-yellow-1000 uppercase hover:underline">
                     {linkLabel}

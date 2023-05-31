@@ -42,7 +42,7 @@ export function NewsletterForm() {
         </p>
       </div>
       <form className="mt-12" onSubmit={handleFormSubmit}>
-        <div className="grid grid-cols-4 gap-x-4 gap-y-10">
+        <div className="grid gap-4 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-10">
           {keys.map((key) => (
             <Input
               key={key}
